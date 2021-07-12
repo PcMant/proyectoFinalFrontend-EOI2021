@@ -1,23 +1,73 @@
-
-<div class="navbar">
-    <div class="cabecera">
-        <img src="../assets/guitar2.png"  alt="logo" [routerLink]="['/']">
-        k-band
-    </div>
+<header>
+    <div class="navbar">
     
-    <div class="log">
-        <div class="btn-group">
-            <button (click)="login()" *ngIf="!loged()" class="btn-success">Acceder</button>
+        <div class="row">
+            <div class="cabecera">
+                <img src="../assets/guitar2.png"  alt="logo" [routerLink]="['/']">
+                k-band
+            </div>
 
+    
+            <div class="column ml-2">
+                <!-- Cada etiqueta hija de column será una columna-->
+                <div class="log">
+                    <input class="justify-content-center" placeholder="Buscar canción, Banda, etc"/>
+                    <div class="btn-group col-12">
+                        <button (click)="login()" *ngIf="!loged()" class="btn-success">Acceder</button>
+        
+                        <button *ngIf="loged()" class="btn-secondary">Usuario</button>
+                        <button (click)="signout()" *ngIf="loged()==true" class="btn-danger">Cerrar Sesión</button> 
+                    </div>
+                
+                </div>
 
-            <button *ngIf="loged()" class="btn-secondary">Usuario</button>
-            <button (click)="signout()" *ngIf="loged()==true" class="btn-danger">Cerrar Sesión</button> 
+                <div class="row btn-group ">
+                    <!--cada etiqueta hija de col será u-->
+                    <button (click)="nachoInvita()"  class="menu col">Estilos</button>
+                    <button class="menu col">Grupos</button>
+                    <button class="menu col">Eventos</button>
+                    <button class="menu col">Tienda</button>
+        
+                </div>
+            </div> 
         </div>
+        
     
+
+    </div>
+</header>   
+<!--
+    <div class="container">
+        <div class="column">
+             Cada etiqueta hija de column será una columna
+            <div class="log">
+                <input class="mr-7 mx-auto col-5"placeholder="Buscar canción, Banda, etc"/>
+                <div class="btn-group col-12">
+                    <button (click)="login()" *ngIf="!loged()" class="btn-success">Acceder</button>
+    
+                    <button *ngIf="loged()" class="btn-secondary">Usuario</button>
+                    <button (click)="signout()" *ngIf="loged()==true" class="btn-danger">Cerrar Sesión</button> 
+                </div>
+            
+            </div>
+
+            <div class="row btn-group col">
+                cada etiqueta hija de col será u
+                <button (click)="nachoInvita()"  class="menu col">Estilos</button>
+                <button class="menu col">Grupos</button>
+                <button class="menu col">Eventos</button>
+                <button class="menu col">Tienda</button>
+    
+            </div>
+        </div>
+        
+        
+       
+        
     </div>
     
 </div>
-<!--
+
 <div class="align-self-center collapse navbar-collapse flex-fill  d-lg-flex justify-content-lg-between" id="templatemo_main_nav">
     <div class="flex-fill">
         <ul class="nav navbar-nav d-flex justify-content-between mx-lg-auto">
@@ -56,7 +106,7 @@
         </div>
     </div>
     
-<br>-->
+<br>--><!--
 <div class="container">
     <div class="row">
         <div class="btn-group">
@@ -72,7 +122,7 @@
     <div *ngIf="invita===true">Nacho invitate a unas birras</div>
     
 </div>
-
+-->
 <footer>
     
 </footer>
