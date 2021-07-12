@@ -9,9 +9,14 @@ Se añade el firebaseConfig en environment y app.module.ts
 se importan los ficheros y se añaden en el import del NgModule lo indicado por la web
 
 3
-En app.component.tsse añade el constructor, se importa y se añade el item
+En app.component.ts se añade el constructor, se importa y se añade el item
+
+
+4
+Para generar el fichero donde tipearemos el usuario ponemos lo siguiente en la terminaly se creara dentro de app
+  ng generate interface shared/models/user
+
+Crearemos otra carpeta con ficheros para guardar la lógica de autentificación
+ng generate service shared/services/auth y aquí en el contructor ponemos el private del o que quermos usar
 -->
 <router-outlet></router-outlet>
-<p>funciona
-  
-</p>

@@ -1,0 +1,78 @@
+
+<div class="navbar">
+    <div class="cabecera">
+        <img src="../assets/guitar2.png"  alt="logo" [routerLink]="['/']">
+        k-band
+    </div>
+    
+    <div class="log">
+        <div class="btn-group">
+            <button (click)="login()" *ngIf="!loged()" class="btn-success">Acceder</button>
+
+
+            <button *ngIf="loged()" class="btn-secondary">Usuario</button>
+            <button (click)="signout()" *ngIf="loged()==true" class="btn-danger">Cerrar Sesión</button> 
+        </div>
+    
+    </div>
+    
+</div>
+<!--
+<div class="align-self-center collapse navbar-collapse flex-fill  d-lg-flex justify-content-lg-between" id="templatemo_main_nav">
+    <div class="flex-fill">
+        <ul class="nav navbar-nav d-flex justify-content-between mx-lg-auto">
+            <li class="nav-item">
+                <button>Tienda</button>
+            </li>
+            <li class="nav-item">
+                <button>Quedadas</button>
+            </li>
+            <li class="nav-item">
+                <button>Perfil</button>  <!- cambiar  href de shop a perfil(crear)->
+            </li>
+            <li class="nav-item">
+                <button>Contacto</button>
+            </li>
+        </ul>
+    </div>
+<hr>
+    <div class="navbar ">
+        
+        <button class="navbar-toggler navbar-dark" type="button" data-toggle="collapse" data-target="#main-navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="main-navigation">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Home</a>
+             </li>
+            <li class="nav-item">
+                    <a class="nav-link" href="#">About</a>
+            </li>
+            <li class="nav-item">
+                    <a class="nav-link" href="#">Contacto</a>
+            </li>
+            </ul>
+        </div>
+    </div>
+    
+<br>-->
+<div class="container">
+    <div class="row">
+        <div class="btn-group">
+            
+            <button (click)="nachoInvita()"  class="menu">Estilos</button>
+            <button class="menu">Grupos</button>
+            <button class="menu">Eventos</button>
+            <button class="menu">Tienda</button>
+
+        </div>
+    </div>
+
+    <div *ngIf="invita===true">Nacho invitate a unas birras</div>
+    
+</div>
+
+<footer>
+    
+</footer>
