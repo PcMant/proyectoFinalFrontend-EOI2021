@@ -9,12 +9,20 @@ import { AngularFireModule } from '@angular/fire';
 import { AngularFirestoreModule } from '@angular/fire/firestore';
 import { AngularFireAnalyticsModule } from '@angular/fire/analytics';
 import { HomeComponent } from './home/home.component';
-import { ProfileComponent } from './profile/profile.component';
+import { ProfileComponent } from './components/profile/profile.component';
+import { EstilosComponent } from './components/estilos/estilos.component';
+import { GruposComponent } from './components/grupos/grupos.component';
+import { EventosComponent } from './components/eventos/eventos.component';
+import { TablonComponent } from './components/tablon/tablon.component';
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
-    ProfileComponent
+    ProfileComponent,
+    EstilosComponent,
+    GruposComponent,
+    EventosComponent,
+    TablonComponent
   ],
   imports: [
     BrowserModule,
