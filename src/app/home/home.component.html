@@ -1,135 +1,114 @@
-<header>
-    <div class="navbar">
-    
-        <div class="row">
-            <div class="cabecera">
-                <img src="../assets/guitar2.png"  alt="logo" [routerLink]="['/']">
-                <span class="titulo">k-band</span>
-
-               
-                
-                    <div class="acceso btn-group">
-                        <input class="justify-content-center" placeholder="Buscar canción, Banda, etc"/>
-                        <button (click)="login()" *ngIf="!loged()" class="btn-success">Acceder</button>
-        
-                        <button *ngIf="loged()" class="btn-secondary">Usuario</button>
-                        <button (click)="signout()" *ngIf="loged()==true" class="btn-danger">Cerrar Sesión</button> 
-                    </div>
-                
-                
-            </div>
-
-    
-            <div class="column ml-2">
-                <!-- Cada etiqueta hija de column será una columna-->
-               
-
-                <div class="row btn-group ">
-                    <!--cada etiqueta hija de col será u-->
-                    <button routerLink="/estilos"  class="menu col">Estilos</button>
-                    <button routerLink="/grupos" class="menu col">Grupos</button>
-                    <button routerLink="/eventos" class="menu col">Eventos</button>
-                    <button routerLink="/tablon" class="menu col">Tablon</button>
-                    <button routerLink="/tablon" class="menu col">Tablon</button>
-                    <!--<button routerLink="/salas" class="menu col">Salas</button>-->
-        
-                </div>
-
-              
-            </div> 
-        </div>
-        
-    
-
-    </div>
-</header>   
-<!--
+<div class="body" style="background-color:#c5afaf59">
     <div class="container">
-        <div class="column">
-             Cada etiqueta hija de column será una columna
-            <div class="log">
-                <input class="mr-7 mx-auto col-5"placeholder="Buscar canción, Banda, etc"/>
-                <div class="btn-group col-12">
-                    <button (click)="login()" *ngIf="!loged()" class="btn-success">Acceder</button>
+    <div class="row">
+
+        <div class="novedad">
+            <h3>Novedades</h3>
+            <p class="align-right">
+            <img  class="col-md-4 mt-1 ml-1" src="https://los40es00.epimg.net/los40/imagenes/2019/02/28/musica/1551380649_095150_1551380782_noticia_normal.jpg" alt="novedad" width="100%" aling="let">
+            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the indus
+            try's standard dummy text ever since the 1500s, when an unknown printer took a galley
+            of type and scrambled it to make a type specimen book. It has survived not only five cent
+            uries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popula
+            rised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more r
+            ecently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+        </p>
+        </div>
+    </div>
     
-                    <button *ngIf="loged()" class="btn-secondary">Usuario</button>
-                    <button (click)="signout()" *ngIf="loged()==true" class="btn-danger">Cerrar Sesión</button> 
-                </div>
-            
+                    
+                    <h4>Rock</h4>
+
+                    <h3>Destacado del mes</h3>
+                    <div class="row">
+                    <img  class="col-md-4 mt-1 ml-1" src="https://los40es00.epimg.net/los40/imagenes/2019/02/28/musica/1551380649_095150_1551380782_noticia_normal.jpg" alt="novedad" width="100%">
+                    <h3>Novedades</h3>
+                    <div class="col-md-2 mt-1 ml-1 ">1
+                        <img src="https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/1280px-coldplay-global-citizen-festival-hamburg-14-1525949935.jpg?crop=1.00xw:0.754xh;0,0.193xh&resize=980:*" alt="rock" width="100%">
+                    </div>
+                    <div class="col-md-2 mt-1 ml-1">2
+                        <img src="https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/gettyimages-841024760-1525950386.jpg?crop=1xw:1xh;center,top&resize=980:*" alt="rock" width="100%">
+                    </div>
+                    <div class="col-md-2 mt-1 ml-1 ">3
+                        <img src="https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/gettyimages-841024760-1525950386.jpg?crop=1xw:1xh;center,top&resize=980:*" alt="rock" width="100%">
+                    </div>
+               
+                
             </div>
 
-            <div class="row btn-group col">
-                cada etiqueta hija de col será u
-                <button (click)="nachoInvita()"  class="menu col">Estilos</button>
-                <button class="menu col">Grupos</button>
-                <button class="menu col">Eventos</button>
-                <button class="menu col">Tienda</button>
-    
+            <div class="row">
+                <h4>Jazz</h4>
+                <div class="col-md-4  novedad">4
+                    <img src="https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/1280px-coldplay-global-citizen-festival-hamburg-14-1525949935.jpg?crop=1.00xw:0.754xh;0,0.193xh&resize=980:*" alt="rock" width="100%">
+                </div>
+                <div class="col-md-4  novedad">5
+                    <img src="https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/gettyimages-841024760-1525950386.jpg?crop=1xw:1xh;center,top&resize=980:*" alt="rock" width="100%">
+                </div>
+                <div class="col-md-4 novedad ">6
+                    <img src="https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/gettyimages-841024760-1525950386.jpg?crop=1xw:1xh;center,top&resize=980:*" alt="rock" width="100%">
+                </div>
             </div>
-        </div>
-        
-        
+            <div class="row">
+                <h4>EDM</h4>
+                <div class="col-md-4  novedad">4
+                    <img src="https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/1280px-coldplay-global-citizen-festival-hamburg-14-1525949935.jpg?crop=1.00xw:0.754xh;0,0.193xh&resize=980:*" alt="rock" width="100%">
+                </div>
+                <div class="col-md-4  novedad">5
+                    <img src="https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/gettyimages-841024760-1525950386.jpg?crop=1xw:1xh;center,top&resize=980:*" alt="rock" width="100%">
+                </div>
+                <div class="col-md-4 novedad ">6
+                    <img src="https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/gettyimages-841024760-1525950386.jpg?crop=1xw:1xh;center,top&resize=980:*" alt="rock" width="100%">
+                </div>
+            </div>
        
         
-    </div>
-    
-</div>
-
-<div class="align-self-center collapse navbar-collapse flex-fill  d-lg-flex justify-content-lg-between" id="templatemo_main_nav">
-    <div class="flex-fill">
-        <ul class="nav navbar-nav d-flex justify-content-between mx-lg-auto">
-            <li class="nav-item">
-                <button>Tienda</button>
-            </li>
-            <li class="nav-item">
-                <button>Quedadas</button>
-            </li>
-            <li class="nav-item">
-                <button>Perfil</button>  <!- cambiar  href de shop a perfil(crear)->
-            </li>
-            <li class="nav-item">
-                <button>Contacto</button>
-            </li>
-        </ul>
-    </div>
-<hr>
-    <div class="navbar ">
         
-        <button class="navbar-toggler navbar-dark" type="button" data-toggle="collapse" data-target="#main-navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="main-navigation">
-            <ul class="navbar-nav">
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Home</a>
-             </li>
-            <li class="nav-item">
-                    <a class="nav-link" href="#">About</a>
-            </li>
-            <li class="nav-item">
-                    <a class="nav-link" href="#">Contacto</a>
-            </li>
-            </ul>
-        </div>
     </div>
-    
-<br>--><!--
-<div class="container">
-    <div class="row">
-        <div class="btn-group">
-            
-            <button (click)="nachoInvita()"  class="menu">Estilos</button>
-            <button class="menu">Grupos</button>
-            <button class="menu">Eventos</button>
-            <button class="menu">Tienda</button>
+    <!--
+      <hr>
+    <div class="gallery-container">
+        <div class="row">
+            <div class="column">
+                <h3>Destacado del mes</h3>
+                <div class="fav">
+                    <img src="https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/gettyimages-477345676-1525950190.jpg?crop=1xw:1xh;center,top&resize=980:*" alt="novedad" width="70%">
+                </div>
 
+                
+            </div>
+
+            <h3>Novedad</h3>
+            <div class="column">
+                <h4>Rock</h4>
+                <div class="rock gallery__item">
+                    <img class="gallery__img" src="https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/gettyimages-841024760-1525950386.jpg?crop=1xw:1xh;center,top&resize=980:*" alt="rock" width="80%">
+                    <h4 class="gallery__tittle">AC DC</h4>
+                </div>
+            </div>
+
+            <div class="column">
+                <h4>Indie</h4>
+                <div class="indie">
+                    <img src="https://pixabay.com/es/illustrations/nombres-de-dominio-1772242/" alt="indie">
+                </div>
+            </div>
+
+            <div class="column">
+                <h4>EDM</h4>
+                <div class="edm">
+                    
+                </div>
+            </div>
+
+            <div class="column">
+                <h4>Jazz</h4>
+                <div class="jazz">
+                    
+                </div>
+            </div>
         </div>
-    </div>
-
-    <div *ngIf="invita===true">Nacho invitate a unas birras</div>
-    
+    </div>-->
 </div>
--->
 <footer>
     
 </footer>

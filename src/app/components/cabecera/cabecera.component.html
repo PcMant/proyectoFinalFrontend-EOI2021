@@ -1,0 +1,51 @@
+<header>
+    <div class="navbar">
+    
+        <div class="row">
+            <div class="cabecera">
+                <img src="../assets/guitar2.png"  alt="logo" [routerLink]="['/']">
+                <span class="titulo">dMusic</span>
+
+               
+                
+                    <div class="acceso justify-content-end">
+                        <input  placeholder="Buscar canción, Banda, etc"/>
+                        <button (click)="login()" *ngIf="!loged()" class="btn-success">Acceder</button>
+        
+                        <button *ngIf="loged()" class="btn-secondary">Usuario</button>
+                        <button (click)="signout()" *ngIf="loged()==true" class="btn-danger">Cerrar Sesión</button> 
+                    </div>
+                
+                
+            </div>
+
+    
+            
+                
+            <!--md es para el tipo de patannal del dispositivo, mb margin bottom-->
+            <div class="row">
+                <!--cada con col-xxl-2,decimos cuando la pantalla sea grande cada boton ocupara 2/12, cuando sea mediana md-6, ocupara 6/12 ...-->
+                <button routerLink="/estilos"  class="menu col-xxl-2 col-md-6 col-sm-12">Estilos</button>
+                <button routerLink="/grupos" class="menu col-xxl-2 col-md-6 col-sm-12">Grupos</button>
+                <button routerLink="/eventos" class="menu col-xxl-2 col-md-6 col-sm-12">Eventos</button>
+                <button routerLink="/tablon" class="menu col-xxl-2 col-md-6 col-sm-12">Tablon</button>
+                <button  class="menu col-xxl-2 col-md-6 col-sm-12">Salas</button>
+                <button  class="menu col-xxl-2 col-md-6 col-sm-12">Tienda</button>
+
+
+            </div>
+              
+                
+                
+                
+           
+                
+
+              
+            
+        </div>
+        
+    
+
+    </div>
+</header>   

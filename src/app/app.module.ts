@@ -14,6 +14,7 @@ import { EstilosComponent } from './components/estilos/estilos.component';
 import { GruposComponent } from './components/grupos/grupos.component';
 import { EventosComponent } from './components/eventos/eventos.component';
 import { TablonComponent } from './components/tablon/tablon.component';
+import { CabeceraComponent } from './components/cabecera/cabecera.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -22,7 +23,8 @@ import { TablonComponent } from './components/tablon/tablon.component';
     EstilosComponent,
     GruposComponent,
     EventosComponent,
-    TablonComponent
+    TablonComponent,
+    CabeceraComponent
   ],
   imports: [
     BrowserModule,

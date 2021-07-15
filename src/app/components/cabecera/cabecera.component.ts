@@ -1,17 +1,18 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'home',
-  templateUrl: './home.component.html',
-  styleUrls: ['./home.component.scss']
+  selector: 'cabecera',
+  templateUrl: './cabecera.component.html',
+  styleUrls: ['./cabecera.component.scss']
 })
-export class HomeComponent implements OnInit {
+export class CabeceraComponent implements OnInit {
 
   constructor() { }
 
   ngOnInit(): void {
   }
-/*
+
+  
   isLoged=false;
   loged():boolean{
     if(this.isLoged==false){
@@ -28,22 +29,4 @@ export class HomeComponent implements OnInit {
   signout():boolean{
     return this.isLoged=false;
   }
-
-  invita=false;
-  nachoInvita():boolean{
-    return this.invita=!this.invita
-  }
-  
- 
-  user={
-    name="",
-    brand=false,
-    estilos=[],
-    brandName="",
-    integrantes=[];
-  }*/
-
-
-
-
 }
