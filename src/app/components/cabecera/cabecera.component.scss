@@ -65,19 +65,19 @@
         button.menu:hover{
             background-color:rgba(236, 139, 101, 0.822);
             text-decoration: none;
-            color:yellow;
             transition:1.2s;//controla le tiempo de la transición del clor
             font-size:35px; 
 
         }
-   
-   
+        //con estoy el router active cuando clickeamos un boton este se queda con este estilo
+        .RutaEsperada{
+            background-color:rgba(236, 139, 101, 0.822);
+            text-decoration: none;   
+            font-size:35px;
+        }
     }
-    
-   
-    
-
-    
 }
+
+
 
 

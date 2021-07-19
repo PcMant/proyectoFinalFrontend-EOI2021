@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 
+
 @Component({
   selector: 'cabecera',
   templateUrl: './cabecera.component.html',
@@ -15,6 +16,7 @@ export class CabeceraComponent implements OnInit {
   
   isLoged=false;
   loged():boolean{
+   
     if(this.isLoged==false){
       return this.isLoged;
     }else{
@@ -29,4 +31,9 @@ export class CabeceraComponent implements OnInit {
   signout():boolean{
     return this.isLoged=false;
   }
+
+  
+
+
+
 }
