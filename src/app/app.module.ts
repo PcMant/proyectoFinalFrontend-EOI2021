@@ -15,6 +15,8 @@ import { GruposComponent } from './components/grupos/grupos.component';
 import { EventosComponent } from './components/eventos/eventos.component';
 import { TablonComponent } from './components/tablon/tablon.component';
 import { CabeceraComponent } from './components/cabecera/cabecera.component';
+import { FooterComponent } from './components/footer/footer.component';
+import { IvyCarouselModule } from 'angular-responsive-carousel';
 @NgModule({
   declarations: [
     AppComponent,
@@ -24,14 +26,16 @@ import { CabeceraComponent } from './components/cabecera/cabecera.component';
     GruposComponent,
     EventosComponent,
     TablonComponent,
-    CabeceraComponent
+    CabeceraComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     AngularFireModule.initializeApp(environment.firebaseConfig),
     AngularFireAnalyticsModule,
-    AngularFirestoreModule
+    AngularFirestoreModule,
+    IvyCarouselModule
   ],
   providers: [],
   bootstrap: [AppComponent]
