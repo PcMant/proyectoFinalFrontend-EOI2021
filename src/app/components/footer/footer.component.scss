@@ -1,4 +1,12 @@
 .container-fluid{
     background-color:#a52a2a;
+
+    .titulo{ 
+        font-size:50px;
+        margin-left:0px;
+        color:white;
+        /*el código de abajo es borde del texto negro*/
+        text-shadow: 3px 3px 3px #000000;
+    }
 }
 
