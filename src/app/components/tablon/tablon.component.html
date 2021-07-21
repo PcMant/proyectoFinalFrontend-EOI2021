@@ -1,8 +1,9 @@
 <div class="container pl-4 col-12">
     <!-- Botton modal-->
     <button  class="add btn btn-success  mt-3" data-bs-toggle="modal" data-bs-target="#exampleModal" data-bs-whatever="@mdo"><img src="https://image.flaticon.com/icons/png/512/2052/2052655.png"></button>
+    
     <!--Modal-->
-    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div   class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog">
           <div class="modal-content">
             <div class="modal-header">
@@ -10,14 +11,17 @@
               <button type="button"  class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body">
-              <form>
+              <form [formGroup]="tablonForm"> <!-- Aquí metemos [formGroup]="tablonForm" para que se enlace con la logica-->
                 <div class="mb-3">
-                  <label for="recipient-name"  class="mensaje col-form-label">Titulo:</label>
-                  <input type="text" class="form-control" id="recipient-name">
+                  <!-- label permite hacer focus (señalar un campo al hacer click al label de manera
+                    que cuando toque titulo se marcara el input), se asocia con "for" en este caso el label se ha asocaido al input de abajo
+                  mediante el id-->
+                  <label for="recipient-name"  class="text-dark col-form-label">Titulo:</label>
+                  <input type="text" class="form-control" formControlName="titulo" id="recipient-name">
                 </div>
                 <div class="mb-3">-
-                  <label for="message-text"  class="mensaje col-form-label">Mensaje</label>
-                  <textarea class="form-control" id="message-text"></textarea>
+                  <label for="message-text"  class="text-dark col-form-label">Mensaje</label>
+                  <textarea class="form-control" formControlName="contenido" id="message-text"></textarea>
                 </div>
               </form>
             </div>
@@ -29,6 +33,7 @@
         </div>
       </div>
 
+  <!-- Tablon-->
     <ul>
         <li>
           <a href="#">

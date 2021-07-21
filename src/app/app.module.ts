@@ -17,6 +17,8 @@ import { TablonComponent } from './components/tablon/tablon.component';
 import { CabeceraComponent } from './components/cabecera/cabecera.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { IvyCarouselModule } from 'angular-responsive-carousel';
+import { HttpClientModule } from '@angular/common/http';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 @NgModule({
   declarations: [
     AppComponent,
@@ -35,7 +37,10 @@ import { IvyCarouselModule } from 'angular-responsive-carousel';
     AngularFireModule.initializeApp(environment.firebaseConfig),
     AngularFireAnalyticsModule,
     AngularFirestoreModule,
-    IvyCarouselModule
+    IvyCarouselModule,
+    HttpClientModule,
+    FormsModule,
+  ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -18,6 +18,24 @@ Para generar el fichero donde tipearemos el usuario ponemos lo siguiente en la t
 
 Crearemos otra carpeta con ficheros para guardar la lógica de autentificación
 ng generate service shared/services/auth y aquí en el contructor ponemos el private del o que quermos usar
+
+
+5
+Después de crear los componentes creamos el service para meter la lógica:
+ng generate service series, series seria el nombre pero se puede cambiar a otro más descriptivo,
+en app.module.ts se añade
+import { HttpClientModule } from '@angular/common/http'; arriba y
+HttpClientModule; en la parte de abajo en imports
+
+
+6
+Vamos a validar formularios (ReactiveFormsModule y FormsModule)
+importamos los modular en app.module.ts
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+en imports de la parte de abajo ponemos:
+FormsModule,
+ReactiveFormsModule
+
 -->
 <cabecera></cabecera>
 <router-outlet></router-outlet>
