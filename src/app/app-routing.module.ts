@@ -1,5 +1,5 @@
 import { NgModule } from '@angular/core';
-import { RouterModule, Routes } from '@angular/router';
+import { RouterModule, Routes} from '@angular/router';
 import { EstilosComponent } from './components/estilos/estilos.component';
 import { EventosComponent } from './components/eventos/eventos.component';
 import { GruposComponent } from './components/grupos/grupos.component';
@@ -11,9 +11,12 @@ const routes: Routes = [
   {path:"",component:HomeComponent},
   {path:"estilos",component:EstilosComponent},
   {path:"eventos",component:EventosComponent},
+  
+  {path:'grupos/:estilo',component:GruposComponent},
   {path:"grupos",component:GruposComponent},
   {path:"profile",component:ProfileComponent},
-  {path:"tablon",component:TablonComponent}
+  {path:"tablon",component:TablonComponent},
+  
 ];
 
 @NgModule({

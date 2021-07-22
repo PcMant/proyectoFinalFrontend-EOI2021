@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { AngularFireStorage } from '@angular/fire/storage';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 
 type posit={titulo:string,contenido:string};
@@ -16,7 +17,7 @@ export class TablonComponent implements OnInit {
 //dentro del constructor porque se ejecuta el formulario al principio 
 //cuando carga la página
   tablonForm:FormGroup;
-  constructor(private fb:FormBuilder) {
+  constructor(private storage: AngularFireStorage,private fb:FormBuilder) {
     this.tablonForm = this.fb.group({
       titulo: ['', [Validators.required]],
       contenido: ['', [Validators.required]]
@@ -29,10 +30,14 @@ export class TablonComponent implements OnInit {
   }
   
   /*Función convertida en variable para ahorrarnos escribir varias
-veces this.mForm.controls al acceder a un campo*/
+  veces this.mForm.controls al acceder a un campo*/
   get f() {
     return this.tablonForm.controls
   }
+
+
+
+
 }
 
 

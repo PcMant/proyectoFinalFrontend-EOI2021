@@ -36,6 +36,41 @@ en imports de la parte de abajo ponemos:
 FormsModule,
 ReactiveFormsModule
 
+7
+Se añade firebaseStorage con el comando
+ng add @angular/fire
+
+8
+Creamos el servicio de auth service para importar en app.module.ts 
+las autentificacioens etc
+y metemos lo siguiente
+providers: [
+    AuthService,
+    { provide: BUCKET, useValue: environment.firebaseConfig.storageBucket }
+  ],
+  e importamos los siguientes modulos
+
+
+9
+Para cada colección creamos un servicio, en este caso como ejemplo grupos, en el que tendremos la lógica para acceder a firebase
+ng generate service shared/services/grupos
+
+10
+Dentro de la carpeta shared tendremos:
+la carpeta service, la cual tiene los servicios, dentro de de service un fichero.ts por cada logica que tengamos
+la carpeta model, el cual tendra un fichero.ts que contendra una Clase a exportar que se usara de modelo que deba tener firebase
+
+11
+En el componente.ts donde queramos importar el servicio lo ponemos en el constructor
+constructor (private gruposService:GruposService)
+
+12
+Probar el loadGroups:
+loadGroups(){
+    this.gruposService.readAllPost().subscribe( data=>{
+      console.log(data)
+    })
+  }
 -->
 <cabecera></cabecera>
 <router-outlet></router-outlet>

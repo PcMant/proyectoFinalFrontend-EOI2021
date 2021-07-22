@@ -1,42 +1,23 @@
 <div class="container mt-4">
     
-    <div class="row">
+    <div class="row" *ngFor="let item of allGroups">
         
         <div class=" caja col-md-12 col-xl-6">
             <div class="disco">
-                <img  class="portada" src="https://www.espectaculosbcn.com/wp-content/uploads/2019/05/mejores-grupos-de-rock-espa%C3%B1ol-1.jpg" alt="novedad" width="100%">
-                <div class="titulo">AC DC</div>
+                <img  class="portada" src="{{item.foto}}" alt="novedad" width="100%">
+                <div class="titulo">{{item.nombre}}</div>
             </div>
         </div>
        
             <div class=" col-md-12 col-xl-6">
-                El siguiente texto debería mostrarse a la derecha de la imagen, pero algo falla ya que se empieza a mostrarse detrás de esta
-                El siguiente texto debería mostrarse a la derecha de la imagen, pero algo falla ya que se empieza a mostrarse detrás de esta
-                El siguiente texto debería mostrarse a la derecha de la imagen, pero algo falla ya que se empieza a mostrarse detrás de esta
-
+               {{item.bio}}
             </div>
         
 
         <hr class="mt-4 mb-4">
     </div>
-    <div class="row">
-        
-        <div class="caja col-md-12 col-xl-6">
-            <div class="disco">
-                <img  class="portada" src="https://www.espectaculosbcn.com/wp-content/uploads/2019/05/mejores-grupos-de-rock-espa%C3%B1ol-1.jpg" alt="novedad" width="100%">
-                <div class="titulo">AC DC</div>
-            </div>
-        </div>
-       
-            <div class=" col-md-12 col-xl-6">
-                El siguiente texto debería mostrarse a la derecha de la imagen, pero algo falla ya que se empieza a mostrarse detrás de esta
-                El siguiente texto debería mostrarse a la derecha de la imagen, pero algo falla ya que se empieza a mostrarse detrás de esta
-                El siguiente texto debería mostrarse a la derecha de la imagen, pero algo falla ya que se empieza a mostrarse detrás de esta
-
-            </div>
-        
-
-        <hr class="mt-4">
-    </div>
 
 </div>
+
+
+

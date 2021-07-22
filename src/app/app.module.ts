@@ -17,8 +17,11 @@ import { TablonComponent } from './components/tablon/tablon.component';
 import { CabeceraComponent } from './components/cabecera/cabecera.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { IvyCarouselModule } from 'angular-responsive-carousel';
-import { HttpClientModule } from '@angular/common/http';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { AngularFireAuthModule } from '@angular/fire/auth';
+import { AngularFireStorageModule, BUCKET } from '@angular/fire/storage';
+import { AuthService } from './shared/services/auth.service';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -36,13 +39,17 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     AppRoutingModule,
     AngularFireModule.initializeApp(environment.firebaseConfig),
     AngularFireAnalyticsModule,
+    AngularFireStorageModule,
     AngularFirestoreModule,
+    AngularFireAuthModule,
     IvyCarouselModule,
-    HttpClientModule,
     FormsModule,
-  ReactiveFormsModule
+    ReactiveFormsModule
   ],
-  providers: [],
+  providers: [
+    AuthService,
+    { provide: BUCKET, useValue: environment.firebaseConfig.storageBucket }
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

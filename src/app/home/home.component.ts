@@ -11,37 +11,7 @@ export class HomeComponent implements OnInit {
 
   ngOnInit(): void {
   }
-/*
-  isLoged=false;
-  loged():boolean{
-    if(this.isLoged==false){
-      return this.isLoged;
-    }else{
-      return this.isLoged=true;
-    }
-  }
 
-  login():boolean{
-    return this.isLoged=true;
-  }
-
-  signout():boolean{
-    return this.isLoged=false;
-  }
-
-  invita=false;
-  nachoInvita():boolean{
-    return this.invita=!this.invita
-  }
-  
- 
-  user={
-    name="",
-    brand=false,
-    estilos=[],
-    brandName="",
-    integrantes=[];
-  }*/
 
 
 
