@@ -5,3 +5,4 @@ export class Grupo{
     estiloMusical:string[]=[];
     esGrupo:boolean=false;
 }
+

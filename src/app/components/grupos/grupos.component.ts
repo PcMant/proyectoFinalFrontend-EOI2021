@@ -39,15 +39,8 @@ export class GruposComponent implements OnInit {
           esGrupo:doc.data()["esGrupo"]
         }
         this.allGroups.push(grupo)
-  
       })
     })
   }
- 
-  
-
-  
-
-
 
 }

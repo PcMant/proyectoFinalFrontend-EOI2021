@@ -6,15 +6,16 @@ import { GruposComponent } from './components/grupos/grupos.component';
 import { ProfileComponent } from './components/profile/profile.component';
 import { TablonComponent } from './components/tablon/tablon.component';
 import { HomeComponent } from './home/home.component';
+import { AuthGuard } from './shared/guard/auth.guard';
+
 
 const routes: Routes = [
   {path:"",component:HomeComponent},
   {path:"estilos",component:EstilosComponent},
   {path:"eventos",component:EventosComponent},
-  //{path:'grupos/:estilo',component:GruposComponent},
   {path:"grupos",component:GruposComponent},
-  {path:"profile",component:ProfileComponent},
-  {path:"tablon",component:TablonComponent},
+   {path:"tablon",component:TablonComponent},
+  {path:"profile",component:ProfileComponent, canActivate:[AuthGuard]},
   
 ];
 

@@ -71,6 +71,45 @@ loadGroups(){
       console.log(data)
     })
   }
+
+13
+En GruposService hemos métido toda la lógica para crear,leer,actualizar y borrar grupos (CRUD)
+en función de donde querramos se que utilice la lógica, vamos llamando a
+GruposService en el constructor de dichos ficheros.
+En Grupos.component.ts meteremos para leer firebase
+En Profile.componente.ts metemos para crear, editar y borrar
+En Estilos irá obtener o leer, para que obtenga la info y haga un filtro
+
+
+14
+Por ultimo protegeremos aquellas rutas donde no queremos que acceda la gente
+que no esta registrada, lo hacemos instalando el guard
+ng generate guard shared/guard/auth
+elegimos la opción de CanActivate
+
+ses creara el archivo auth.guard.ts
+y en el tenemos que poner la siguiente :
+
+ constructor(private authService: AuthService, private router: Router) {}
+
+  canActivate(
+    route: ActivatedRouteSnapshot,
+    state: RouterStateSnapshot): Observable<boolean | UrlTree> | Promise<boolean | UrlTree> | boolean | UrlTree {
+    
+      
+    if(this.authService.isLoggedIn() !== true) {
+      this.router.navigate(['/'])
+    }
+
+    return true;
+  }
+}
+
+  e importamos Observable, CanActivate,Router,RouterStateSnapshot y AuthService
+todo esto nos valdra para aquellas personas que busquen acceder a perfil sin identificarse vuleva al inicio
+
+
+en routing.module aquella ruta que queramos proteger ponemos el canActivate de AuthGuard y se importa
 -->
 <cabecera></cabecera>
 <router-outlet></router-outlet>

@@ -1,6 +1,7 @@
 <input placeholder="Nombre del usuario">
 <input placeholder="foto">
 <input placheholder="descripción">
+<!--
 <div class="form-check">
     <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
     <label class="form-check-label" for="flexCheckDefault">
@@ -12,6 +13,139 @@
     <label class="form-check-label" for="flexCheckChecked">
       Rock
     </label>
-  </div>
+  </div>-->
 
-  <button (click)="createGroup()">Crear Grupo</button>
+  <table>
+
+    <!-- Columna 1 -->
+    <tr>
+      <td mt-4 mr-4>
+          <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" checked>
+          <label class="form-check-label" for="flexCheckChecked">
+            Rock
+          </label>
+      </td>
+
+      <td>
+        <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" checked>
+          <label class="form-check-label" for="flexCheckChecked">
+            Jazz
+          </label>
+      </td>
+
+      <td>
+        <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" checked>
+          <label class="form-check-label" for="flexCheckChecked">
+            Pop
+          </label>
+      </td>
+
+      <td>
+        <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" checked>
+          <label class="form-check-label" for="flexCheckChecked">
+            Techno
+          </label>
+      </td>
+  </tr>
+
+
+<!-- Columna 2 -->
+  <tr>
+    <td mt-4 mr-4>
+      <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" checked>
+      <label class="form-check-label" for="flexCheckChecked">
+        Punk
+      </label>
+    </td>
+
+    <td>
+      <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" checked>
+        <label class="form-check-label" for="flexCheckChecked">
+          Soul
+        </label>
+    </td>
+
+    <td>
+      <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" checked>
+        <label class="form-check-label" for="flexCheckChecked">
+          HIP HOP
+        </label>
+    </td>
+
+    <td>
+      <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" checked>
+        <label class="form-check-label" for="flexCheckChecked">
+          Electro
+        </label>
+    </td>
+  </tr>
+
+
+<!-- Columna 3 -->
+  <tr>
+    <td mt-4 mr-4>
+      <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" checked>
+      <label class="form-check-label" for="flexCheckChecked">
+        Metal
+      </label>
+  </td>
+
+  <td>
+    <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" checked>
+      <label class="form-check-label" for="flexCheckChecked">
+        Soul
+      </label>
+  </td>
+
+  <td>
+    <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" checked>
+      <label class="form-check-label" for="flexCheckChecked">
+        Funk
+      </label>
+  </td>
+
+  <td>
+    <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" checked>
+      <label class="form-check-label" for="flexCheckChecked">
+        Jungle
+      </label>
+  </td>
+  </tr>
+
+
+<!-- Columna 4 -->
+  <tr>
+    <td mt-4 mr-4>
+      <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" checked>
+      <label class="form-check-label" for="flexCheckChecked">
+        SKA
+      </label>
+  </td>
+
+  <td>
+    <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" checked>
+      <label class="form-check-label" for="flexCheckChecked">
+        Blues
+      </label>
+  </td>
+
+  <td>
+    <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" checked>
+      <label class="form-check-label" for="flexCheckChecked">
+        Reggaeton
+      </label>
+  </td>
+
+  <td>
+    <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" checked>
+      <label class="form-check-label" for="flexCheckChecked">
+        EDM
+      </label>
+  </td>
+  </tr>
+  </table>
+
+
+  <button (click)="createGroup()">Crear Perfil</button>
+  <button (click)="updateGroup()">Editar Perfil</button>
+  <button (click)="deleteGroup()">Borrar Perfil</button>
