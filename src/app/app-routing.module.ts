@@ -11,8 +11,7 @@ const routes: Routes = [
   {path:"",component:HomeComponent},
   {path:"estilos",component:EstilosComponent},
   {path:"eventos",component:EventosComponent},
-  
-  {path:'grupos/:estilo',component:GruposComponent},
+  //{path:'grupos/:estilo',component:GruposComponent},
   {path:"grupos",component:GruposComponent},
   {path:"profile",component:ProfileComponent},
   {path:"tablon",component:TablonComponent},

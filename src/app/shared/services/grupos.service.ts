@@ -14,4 +14,10 @@ export class GruposService {
     return this.fireStore.collection("grupos").get()
   }
 
+
+
+//me entra un "grupo" (que sera el algo) de tipo "Grupo", que es una clase definida en el modal grupo
+  newGroup(grupo:Grupo){
+    return this.fireStore.collection("grupos").add(grupo) //lo que hace es que devuelve la colección grupos de la base de datos a la cual se le ha añadido un grupo (que sería un documento)
+  }
 }

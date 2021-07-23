@@ -10,17 +10,17 @@ import { Router, ActivatedRoute, Params } from '@angular/router';
 export class GruposComponent implements OnInit {
 
   allGroups: Array<Grupo> = []
-
-  public estilo:string="";
+/*
+  public estilo:string="";*/
   constructor(private gruposService:GruposService,private _route: ActivatedRoute, private _router: Router) { }
 
   ngOnInit(): void {
    this.loadGroups();
-
+/*
     this._route.params.subscribe((params: Params) => {
       console.log(params);
       this.estilo=params.estilo
-    });
+    });*/
 
   }
 
@@ -34,13 +34,20 @@ export class GruposComponent implements OnInit {
         let grupo:Grupo={
           nombre:doc.data()["nombre"],
           foto:doc.data()["foto"],
-          bio:doc.data()["bio"]
+          bio:doc.data()["bio"],
+          estiloMusical:doc.data()["estiloMusical"],
+          esGrupo:doc.data()["esGrupo"]
         }
         this.allGroups.push(grupo)
   
       })
     })
   }
+ 
+  
+
+  
+
 
 
 }
