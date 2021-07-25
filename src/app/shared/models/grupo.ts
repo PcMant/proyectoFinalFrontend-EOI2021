@@ -4,5 +4,6 @@ export class Grupo{
     bio:string="";
     estiloMusical:string[]=[];
     esGrupo:boolean=false;
+    author:string="";
 }
 

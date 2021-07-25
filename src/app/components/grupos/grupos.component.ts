@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Grupo } from 'src/app/shared/models/grupo';
 import { GruposService } from 'src/app/shared/services/grupos.service';
-import { Router, ActivatedRoute, Params } from '@angular/router';
+import { Router, ActivatedRoute } from '@angular/router';
 @Component({
   selector: 'grupos',
   templateUrl: './grupos.component.html',
@@ -10,22 +10,15 @@ import { Router, ActivatedRoute, Params } from '@angular/router';
 export class GruposComponent implements OnInit {
 
   allGroups: Array<Grupo> = []
-/*
-  public estilo:string="";*/
+
   constructor(private gruposService:GruposService,private _route: ActivatedRoute, private _router: Router) { }
 
   ngOnInit(): void {
    this.loadGroups();
-/*
-    this._route.params.subscribe((params: Params) => {
-      console.log(params);
-      this.estilo=params.estilo
-    });*/
-
   }
 
   loadGroups(){
-    this.gruposService.readAllPost().subscribe( data=>{
+    this.gruposService.readAllGroups().subscribe( data=>{
       
       this.allGroups=[]
 
@@ -36,7 +29,8 @@ export class GruposComponent implements OnInit {
           foto:doc.data()["foto"],
           bio:doc.data()["bio"],
           estiloMusical:doc.data()["estiloMusical"],
-          esGrupo:doc.data()["esGrupo"]
+          esGrupo:doc.data()["esGrupo"],
+          author:doc.data()["author"]
         }
         this.allGroups.push(grupo)
       })

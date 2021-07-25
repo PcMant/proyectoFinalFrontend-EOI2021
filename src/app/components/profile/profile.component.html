@@ -1,151 +1,58 @@
-<input placeholder="Nombre del usuario">
-<input placeholder="foto">
-<input placheholder="descripción">
-<!--
-<div class="form-check">
-    <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
-    <label class="form-check-label" for="flexCheckDefault">
-      Jazz
-    </label>
+<div class="container mt-4 ">
+
+  <div class="row">
+    
+
+    <div class="check">
+
+    
+        <button (click)="createGroup()">Crear Perfil</button>
+        <button (click)="updateGroup()">Editar Perfil</button>
+        <button (click)="deleteGroup()">Borrar Perfil</button>
+
+
+      <!-- uno la función que hace switch al boolean al checkbox con check="funcion" y meto lo que me evuelve
+      en una variable pero no como función porque no lo -->
+        <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked"  [(ngModel)]="verify" check="verify()">
+          <label class="form-check-label" for="flexCheckChecked">
+            Eres un músico/grupo de música
+          </label>
+
+        <div class="verify" *ngIf="verify">
+
+          <div class="datos">
+            <input placeholder="Nombre del usuario">
+            <input placeholder="foto">
+            <input placheholder="descripción">
+          </div>
+
+              
+
+          <ng-select
+              [items]="estilosMusicales" 
+              [multiple]="true"
+              bindLabel="name"
+              
+              [closeOnSelect]="false"
+              bindValue="name"
+              [(ngModel)]="estilosGuardados"
+              (click)="guardarEstilos()">
+              
+              <ng-template ng-option-tmp let-item="item" let-item$="item$" let-index="index">
+                  <input id="item-{{index}}" type="checkbox" [ngModel]="item$.selected"/> {{item.name}}
+              </ng-template>
+          </ng-select>
+
+         
+        </div>
+        
+    </div>
   </div>
-  <div class="form-check">
-    <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" checked>
-    <label class="form-check-label" for="flexCheckChecked">
-      Rock
-    </label>
-  </div>-->
+  
+</div>
 
-  <table>
-
-    <!-- Columna 1 -->
-    <tr>
-      <td mt-4 mr-4>
-          <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" checked>
-          <label class="form-check-label" for="flexCheckChecked">
-            Rock
-          </label>
-      </td>
-
-      <td>
-        <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" checked>
-          <label class="form-check-label" for="flexCheckChecked">
-            Jazz
-          </label>
-      </td>
-
-      <td>
-        <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" checked>
-          <label class="form-check-label" for="flexCheckChecked">
-            Pop
-          </label>
-      </td>
-
-      <td>
-        <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" checked>
-          <label class="form-check-label" for="flexCheckChecked">
-            Techno
-          </label>
-      </td>
-  </tr>
-
-
-<!-- Columna 2 -->
-  <tr>
-    <td mt-4 mr-4>
-      <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" checked>
-      <label class="form-check-label" for="flexCheckChecked">
-        Punk
-      </label>
-    </td>
-
-    <td>
-      <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" checked>
-        <label class="form-check-label" for="flexCheckChecked">
-          Soul
-        </label>
-    </td>
-
-    <td>
-      <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" checked>
-        <label class="form-check-label" for="flexCheckChecked">
-          HIP HOP
-        </label>
-    </td>
-
-    <td>
-      <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" checked>
-        <label class="form-check-label" for="flexCheckChecked">
-          Electro
-        </label>
-    </td>
-  </tr>
-
-
-<!-- Columna 3 -->
-  <tr>
-    <td mt-4 mr-4>
-      <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" checked>
-      <label class="form-check-label" for="flexCheckChecked">
-        Metal
-      </label>
-  </td>
-
-  <td>
-    <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" checked>
-      <label class="form-check-label" for="flexCheckChecked">
-        Soul
-      </label>
-  </td>
-
-  <td>
-    <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" checked>
-      <label class="form-check-label" for="flexCheckChecked">
-        Funk
-      </label>
-  </td>
-
-  <td>
-    <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" checked>
-      <label class="form-check-label" for="flexCheckChecked">
-        Jungle
-      </label>
-  </td>
-  </tr>
-
-
-<!-- Columna 4 -->
-  <tr>
-    <td mt-4 mr-4>
-      <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" checked>
-      <label class="form-check-label" for="flexCheckChecked">
-        SKA
-      </label>
-  </td>
-
-  <td>
-    <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" checked>
-      <label class="form-check-label" for="flexCheckChecked">
-        Blues
-      </label>
-  </td>
-
-  <td>
-    <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" checked>
-      <label class="form-check-label" for="flexCheckChecked">
-        Reggaeton
-      </label>
-  </td>
-
-  <td>
-    <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" checked>
-      <label class="form-check-label" for="flexCheckChecked">
-        EDM
-      </label>
-  </td>
-  </tr>
-  </table>
-
-
-  <button (click)="createGroup()">Crear Perfil</button>
-  <button (click)="updateGroup()">Editar Perfil</button>
-  <button (click)="deleteGroup()">Borrar Perfil</button>
+<!-- Tengo que crear un componente que me cargue
+que me cargue los grupos creados, pero debo hacerlo de manera
+que me cargue todos los grupos y me filtre por aquellos que son iguales
+al usuario registrado que esta puesto en el oninit
+-->

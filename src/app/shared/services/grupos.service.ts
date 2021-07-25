@@ -10,7 +10,7 @@ export class GruposService {
   constructor(private fireStore:AngularFirestore) { }
 
 
-  readAllPost(){
+  readAllGroups(){
     return this.fireStore.collection("grupos").get()
   }
 
