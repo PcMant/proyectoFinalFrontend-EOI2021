@@ -12,7 +12,7 @@
                     <input  placeholder="Buscar canción, Banda, etc"/>
                     <button (click)="login()" *ngIf="!loggedVerified()" class="btn-success">Acceder</button>
     
-                    <button routerLink="/profile" *ngIf="loggedVerified()" class="btn btn-primary border border-dark">{{user.username || user.displayName}}</button>
+                    <button routerLink="/profile" *ngIf="loggedVerified()" class="btn btn-primary border border-dark" [routerLinkActive]="['perfilActivado']">{{user.username || user.displayName}}</button>
                     <button (click)="logout()" *ngIf="loggedVerified()==true" class="btn btn-danger border border-dark">Cerrar Sesión</button> 
                 </div>
                    

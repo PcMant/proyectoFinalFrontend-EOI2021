@@ -1,17 +1,24 @@
 <div class="container mt-4 ">
 
-  <div class="row">
+  <div class="row mb-4">
     
-
-    <div class="check">
-
+      <p>Datos de la cuenta</p>
+        <div class="imagenUsuario col-1 mr-4">
+          <img src="{{user.photoURL}}"> 
+        </div>    
+        <div class="infoUsuario col-3 mb-4">
+          <p>Nombre:{{user.username || user.displayName}}</p>
+          <p>email:{{user.email}}</p>
+          
+          <p>{{user.bio}}</p>
+        </div >
+      
     
-        <button (click)="createGroup()">Crear Perfil</button>
-        <button (click)="updateGroup()">Editar Perfil</button>
-        <button (click)="deleteGroup()">Borrar Perfil</button>
-
-
-      <!-- uno la función que hace switch al boolean al checkbox con check="funcion" y meto lo que me evuelve
+    
+    <hr class="mt-4">
+    <div class="check mt-4">
+  
+       <!-- uno la función que hace switch al boolean al checkbox con check="funcion" y meto lo que me evuelve
       en una variable pero no como función porque no lo -->
         <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked"  [(ngModel)]="verify" check="verify()">
           <label class="form-check-label" for="flexCheckChecked">
@@ -21,10 +28,18 @@
         <div class="verify" *ngIf="verify">
 
           <div class="datos">
-            <input placeholder="Nombre del usuario">
-            <input placeholder="foto">
-            <input placheholder="descripción">
+            <input class="mb-4 mt-4 mr-4" [(ngModel)]="nombreArtistico" placeholder=" Nombre artistico">
+           
+            <textarea [(ngModel)]="bio"  rows="10" cols="40" placeholder="  Biografía del grupo" class="col-12"></textarea>
+            <br>
+            <input [(ngModel)]="fotoArtista" class="mb-4 mt-4" placeholder=" Subir imagen">
+            
+            <input [(ngModel)]="video" placeholder=" Subir video">
+            
           </div>
+
+          <!-- Para subir un archivo cargando por la carpeta desde el escritorio pones en el input
+          type="file", pero hay que saber como subirla a firebase, con que typ-->
 
               
 
@@ -44,11 +59,27 @@
           </ng-select>
 
          
+          
+        <button (click)="createGroup()">Crear Perfil</button>
+         <button (click)="updateGroup()">Editar Perfil</button>
+        <button (click)="deleteGroup()">Borrar Perfil</button>
         </div>
-        
+      <hr>
+      <!--
+      <div class="row"> 
+        <div class="galeria-fotos col-6">
+        <h2>Galería de imágenes</h2>
+        fsdafadsfadsfadsfafdsaf
+        </div>
+
+        <div class="galeria-videos col-6">
+          <h2>Galería de videos</h2>
+          dfadsfasdfdasfasf</div>
+        </div>
+        -->
+        <miniprofile></miniprofile>
     </div>
   </div>
-  
 </div>
 
 <!-- Tengo que crear un componente que me cargue
@@ -56,3 +87,4 @@ que me cargue los grupos creados, pero debo hacerlo de manera
 que me cargue todos los grupos y me filtre por aquellos que son iguales
 al usuario registrado que esta puesto en el oninit
 -->
+

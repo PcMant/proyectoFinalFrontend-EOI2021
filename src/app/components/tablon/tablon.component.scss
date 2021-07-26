@@ -5,17 +5,24 @@
     background:#8b4602;
     border:20px solid #582801;
     color:#fff;
+
   }
   h2,p{
     font-size:100%;
     font-weight:normal;
+    list-style-type: none;
+
   }
   ul,li{
     list-style:none;
+    
+  
+
   }
   ul{
     overflow:hidden;
     padding:3em;
+    
   }
   ul li a{
     text-decoration:none;
@@ -36,6 +43,7 @@
     margin:1em;
     float:left;
   }
+  
   ul li h2{
     font-size:140%;
     font-weight:bold;
@@ -89,13 +97,12 @@
   
 
 .add{
-  padding: 10px 15px 10px 15px !important;
-border-radius:50%;
-box-shadow:6px 6px 3px rgba(0, 0, 0, 0.5);
-width:10%;
-height: 10%;
+  padding: 10px !important;
+  border-radius:50%;
+  box-shadow:6px 6px 3px rgba(0, 0, 0, 0.5);
+  width:10%;
+  height: 10%;
     img{
         width:30%;
-        border:2px solid black;
     }
 }
