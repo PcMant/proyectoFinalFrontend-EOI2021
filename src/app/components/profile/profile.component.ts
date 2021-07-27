@@ -86,7 +86,7 @@ export class ProfileComponent implements OnInit {
     rock:["Rock","Punk", "Metal", "SKA"],
     jazz:["Jazz","Soul","Blues","Swing"],
     pop:["Pop","HIP HOP", "Funk","Reggeaton"],
-    techno:["techno","EDM","Jungle","Electro"]
+    techno:["Techno","EDM","Jungle","Electro"]
     
   }
 
