@@ -24,6 +24,7 @@ import { AuthService } from './shared/services/auth.service';
 import { NgSelectModule } from '@ng-select/ng-select';
 import { MiniprofileComponent } from './miniprofile/miniprofile.component';
 import { ErrorComponent } from './components/error/error.component';
+import { PrivacidadComponent } from './components/privacidad/privacidad.component';
 
 
 @NgModule({
@@ -38,7 +39,8 @@ import { ErrorComponent } from './components/error/error.component';
     CabeceraComponent,
     FooterComponent,
     MiniprofileComponent,
-    ErrorComponent
+    ErrorComponent,
+    PrivacidadComponent
   ],
   imports: [
     BrowserModule,

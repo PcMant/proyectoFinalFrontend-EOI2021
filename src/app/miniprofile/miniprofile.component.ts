@@ -40,29 +40,6 @@ export class MiniprofileComponent implements OnInit {
     }
   }
 
-
-  /*loadGroups1(){
-    this.gruposService.readAllGroups().subscribe( data=>{
-      
-      this.allGroups1=[]
-
-      data.forEach((doc:any)=>{
-        console.log(doc, doc.data()["bio"]);
-        let grupo:Grupo={
-          nombre:doc.data()["nombre"],
-          foto:doc.data()["foto"],
-          bio:doc.data()["bio"],
-          estiloMusical:doc.data()["estiloMusical"],
-          esGrupo:doc.data()["esGrupo"],
-          author:doc.data()["author"]
-        }
-        this.allGroups1.push(grupo)
-
-      })
-    })
-  }*/
-
-
   loadGroup1(){
     this.gruposService.readAllGroups().subscribe(data=>{
       this.myGroup=[]
@@ -77,9 +54,5 @@ export class MiniprofileComponent implements OnInit {
       console.log(this.userGroup,"ha salido")
     })
   }
-  //filtro Rock
-  //for (let estilo=0;estilo<lenght(estilosGuardados),estilo++){
-  //  const videos=arrayGuardadoFirebase.filter
-  //}
-
+ 
 }

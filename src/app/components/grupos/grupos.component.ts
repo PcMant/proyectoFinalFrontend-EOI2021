@@ -79,7 +79,7 @@ export class GruposComponent implements OnInit {
 
 
   visitGroup(){
-    this.gruposService.readAllGroups().subscribe(data=>{
+   /* this.gruposService.readAllGroups().subscribe(data=>{
       this.userGroupVisited=[]
       this.userGroup=[]
       data.forEach((doc:any)=>{
@@ -91,6 +91,6 @@ export class GruposComponent implements OnInit {
       )
       //this.userGroupVisited=this.userGroupVisited.filter(u=>u.nombre==this.item)
       console.log(this.userGroup,"ha salido")
-    })
+    })*/
   }
 }

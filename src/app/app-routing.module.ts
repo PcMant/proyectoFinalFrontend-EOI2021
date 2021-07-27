@@ -9,6 +9,7 @@ import { HomeComponent } from './home/home.component';
 import { AuthGuard } from './shared/guard/auth.guard';
 import { MiniprofileComponent } from './miniprofile/miniprofile.component';
 import { ErrorComponent } from './components/error/error.component';
+import { PrivacidadComponent } from './components/privacidad/privacidad.component';
 
 
 const routes: Routes = [
@@ -19,7 +20,8 @@ const routes: Routes = [
   {path:"grupos/:estilo",component:GruposComponent}, // Esto es una ruta que recibe un parámetro, llamado estilo
   {path:"tablon",component:TablonComponent},
   {path:"profile",component:ProfileComponent, canActivate:[AuthGuard]},
-  {path:"profile/:id",component:MiniprofileComponent},
+  {path:"p/:id",component:MiniprofileComponent},
+  {path:"politica-privacidad",component:PrivacidadComponent},
   {path:"**",component:ErrorComponent}
 ];
 
