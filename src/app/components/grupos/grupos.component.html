@@ -1,11 +1,11 @@
 <div class="container mt-4">
     
-    <div class="row" *ngFor="let item of allGroups">
+    <div class="row"  *ngFor="let item of allGroups">
         
         <div class=" caja col-md-12 col-xl-3">
-            <div class="disco">
+            <div class="disco" (click)="visitGroup()" >
                 <img  class="portada" src="{{item.foto}}" alt="novedad" width="50%">
-                <div class="titulo">{{item.nombre}}</div>
+                <div class="titulo" >{{item.nombre}}</div>
                 
             </div>
         </div>

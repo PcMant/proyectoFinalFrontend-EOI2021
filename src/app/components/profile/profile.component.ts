@@ -91,10 +91,10 @@ export class ProfileComponent implements OnInit {
   }
 
   estilosMusicales=[
-    {id: 1, name: "rock"}, {id:2, name: "Punk"},{id:3, name: "SKA"},
+    {id: 1, name: "Rock"}, {id:2, name: "Punk"},{id:3, name: "SKA"},
     {id: 4, name: "Metal"}, {id:5, name: "Jazz"},{id:6, name: "Soul"},
     {id:7, name: "Blues"}, {id:8, name: "Swing"},{id:9, name: "Pop"},
-    {id: 10, name: "techno"}, {id:11, name: "Punk"},{id:12, name: "Punk"},
+    {id: 10, name: "Techno"}, {id:11, name: "House"},{id:12, name: "Jungle"},
 
   ]
   

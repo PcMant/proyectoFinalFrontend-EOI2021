@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { Grupo } from 'src/app/shared/models/grupo';
 import { GruposService } from 'src/app/shared/services/grupos.service';
 import { Router, ActivatedRoute, Params } from '@angular/router';
@@ -12,6 +12,11 @@ export class GruposComponent implements OnInit {
   allGroups: Array<Grupo> = []
   public estilo: string = "";
 
+  allGroups2: Array<Grupo> = []
+  userGroupVisited: Array<Grupo> = []
+  userGroup: Array<Grupo> = []
+  user:any
+  //visita:any
   constructor(private gruposService:GruposService,private _route: ActivatedRoute, private _router: Router) { }
 
   ngOnInit(): void {
@@ -28,6 +33,7 @@ export class GruposComponent implements OnInit {
     }
   }
 
+  @Input() visita:any 
   loadGroups(){
     this.gruposService.readAllGroups().subscribe( data=>{
       
@@ -68,4 +74,23 @@ export class GruposComponent implements OnInit {
     });
   }
 
+
+
+
+
+  visitGroup(){
+    this.gruposService.readAllGroups().subscribe(data=>{
+      this.userGroupVisited=[]
+      this.userGroup=[]
+      data.forEach((doc:any)=>{
+        let grupo:Grupo=doc.data()
+        this.userGroupVisited.push(grupo)
+        console.log(this.userGroupVisited,"el grupo sale")
+        console.log(this.visita,"esto que es")
+      }
+      )
+      //this.userGroupVisited=this.userGroupVisited.filter(u=>u.nombre==this.item)
+      console.log(this.userGroup,"ha salido")
+    })
+  }
 }
