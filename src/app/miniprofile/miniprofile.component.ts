@@ -21,6 +21,7 @@ export class MiniprofileComponent implements OnInit {
     //this.user = this.authService.userData()
     this.myGroup
     this.loadGroup1()
+    this.user = this.authService.userData()
   }
 
 
@@ -53,11 +54,14 @@ export class MiniprofileComponent implements OnInit {
       data.forEach((doc:any)=>{
         let grupo:Grupo=doc.data()
         this.myGroup.push(grupo)
-        console.log(this.myGroup)
-      })
+        console.log(this.myGroup,"vale")
+        
+      }
+      )
   
 
       this.userGroup=this.myGroup.filter(u=>u.author==this.user.uid)
+      console.log(this.userGroup,"ha salido")
     })
   }
   //filtro Rock
