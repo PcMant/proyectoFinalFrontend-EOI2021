@@ -12,14 +12,15 @@ import { GruposService } from '../shared/services/grupos.service';
 export class MiniprofileComponent implements OnInit {
   allGroups1: Array<Grupo> = []
   myGroup: Array<Grupo> = []
-    
-    user:any
+  userGroup: Array<Grupo> = []
+  user:any
   constructor(private gruposService:GruposService, private authService:AuthService) { }
 //private gruposComponent:GruposComponent,private authService:AuthService
   ngOnInit(): void {
     //this.todosGrupos = this.gruposComponent.loadGroups()
     //this.user = this.authService.userData()
     this.myGroup
+    this.loadGroup1()
   }
 
 
@@ -48,15 +49,15 @@ export class MiniprofileComponent implements OnInit {
   loadGroup1(){
     this.gruposService.readAllGroups().subscribe(data=>{
       this.myGroup=[]
-      
+      this.userGroup=[]
       data.forEach((doc:any)=>{
         let grupo:Grupo=doc.data()
-        //grupo=doc.data()
         this.myGroup.push(grupo)
         console.log(this.myGroup)
       })
-      console.log(this.myGroup,"a ver si devuelve")
-      //userGroup=myGroup.filter(grupo=>grupo.author==this.user.uid)
+  
+
+      this.userGroup=this.myGroup.filter(u=>u.author==this.user.uid)
     })
   }
   //filtro Rock
