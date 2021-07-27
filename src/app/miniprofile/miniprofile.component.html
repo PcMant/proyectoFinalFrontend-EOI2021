@@ -1,33 +1,27 @@
-<!--<div class="filterDiv {{user.email}}">
-      <div  *ngFor="let item of todosGrupos"> 
+<div class="row" *ngFor="let item of userGroup"> 
+    <h1>Nombre artistico: {{item.nombre}}</h1>
+    <h3>Portada del grupo</h3>
+    <img src="{{item.foto}}" alt="" width="80%">
+ 
+    <div class="container">
+        <div class="row">
+                <div class="galeria-fotos col-6">
+            
+                    <h2>Galería de imágenes</h2>
+                    <img class="album mt-2" src="https://cdn.hobbyconsolas.com/sites/navi.axelspringer.es/public/styles/855/public/media/image/2017/03/simpson-5x1.jpg?itok=vAaqePR5" alt="" width="40%">
+                    <img class="album mt-2" src="https://i.ytimg.com/vi/4RSF6swMRzg/maxresdefault.jpg" alt="" width="40%">
+                    <img class="album mt-2" src="https://www.lavanguardia.com/files/content_image_desktop_filter/uploads/2019/12/16/5f15ef5b9a4b5.jpeg" alt="" width="40%">
 
-        <div class="row"> 
-          <div class="galeria-fotos col-6">
-          <h2>Galería de imágenes</h2>
-          {{item.foto}}
-          
-          </div>
-
-          <div class="galeria-videos col-6">
-            <h2>Galería de videos</h2>
-            dfadsfasdfdasfasf</div>
-          </div>
-
+                </div>
+        
+                <div class="galeria-videos col-6">
+                    <h2>Galería de videos</h2>
+                    <iframe class="album mt-2" src="https://www.youtube.com/embed/72kOK0_7Zgs"  width="40%" alt="simpson"></iframe>
+                    <iframe class="album mt-2" src="https://www.youtube.com/embed/SWaSuFmoGKU"  width="40%" alt="simpson"></iframe>
+                </div>
         </div>
-</div>
-{{user.name}}-->
-
-
-<div class="row"> 
-    <div class="galeria-fotos col-6">
-        <h2>Galería de imágenes</h2>
-        thrhsrhtrthehsrthsrgsergeg
-        <p>{{myGroup}}</p>
     </div>
-
-        <div class="galeria-videos col-6">
-            <h2>Galería de videos</h2>
-            dfadsfasdfdasfasfgfdsgsdfgsgfsfgsgssfdsgfdsfsdfgsfdgsfdgs
-        </div>
+    
+    
 
 </div>

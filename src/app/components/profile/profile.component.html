@@ -11,29 +11,31 @@
           <p>email:{{user.email}}</p>
           
           <p>{{user.bio}}</p>
-        </div >
+        
       
     
     
+    
+  
+         <!-- uno la función que hace switch al boolean al checkbox con check="funcion" y meto lo que me evuelve
+      en una variable pero no como función porque no lo -->
+          <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked"  [(ngModel)]="verify" check="verify()">
+            <label class="form-check-label" for="flexCheckChecked">
+              <p class="ml-4">Eres un músico/grupo de música</p>
+            </label>
+        </div >
     <hr class="mt-4">
     <div class="check mt-4">
-  
-       <!-- uno la función que hace switch al boolean al checkbox con check="funcion" y meto lo que me evuelve
-      en una variable pero no como función porque no lo -->
-        <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked"  [(ngModel)]="verify" check="verify()">
-          <label class="form-check-label" for="flexCheckChecked">
-            Eres un músico/grupo de música
-          </label>
-
         <div class="verify" *ngIf="verify">
-
+          <p>Para poder registrarte como artista rellené los siguientes campos</p>
+          <br>
           <div class="datos">
             <input class="mb-4 mt-4 mr-4" [(ngModel)]="nombreArtistico" placeholder=" Nombre artistico">
            
             <textarea [(ngModel)]="bio"  rows="10" cols="40" placeholder="  Biografía del grupo" class="col-12"></textarea>
             <br>
             <input [(ngModel)]="fotoArtista" class="mb-4 mt-4" placeholder=" Subir imagen">
-            
+            <br>
             <input [(ngModel)]="video" placeholder=" Subir video">
             
           </div>
@@ -41,7 +43,7 @@
           <!-- Para subir un archivo cargando por la carpeta desde el escritorio pones en el input
           type="file", pero hay que saber como subirla a firebase, con que typ-->
 
-              
+          <br><br>  
           <p>Selecciona los estilos musicales:</p>
           <ng-select
               class="mb-4"
@@ -63,10 +65,13 @@
         <button class="mr-4 btn btn-primary" (click)="createGroup()">Crear Perfil</button>
          <button class="btn btn-warning mr-4"(click)="updateGroup()">Editar Perfil</button>
         <button class="btn btn-danger mr-4" (click)="deleteGroup()">Borrar Perfil</button>
-        </div>
-      <hr>
-  
+        <hr>
         <miniprofile></miniprofile>
+        <hr>
+      </div>
+     
+  
+        
     </div>
   </div>
 </div>

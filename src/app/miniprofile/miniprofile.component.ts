@@ -55,11 +55,8 @@ export class MiniprofileComponent implements OnInit {
         let grupo:Grupo=doc.data()
         this.myGroup.push(grupo)
         console.log(this.myGroup,"vale")
-        
       }
       )
-  
-
       this.userGroup=this.myGroup.filter(u=>u.author==this.user.uid)
       console.log(this.userGroup,"ha salido")
     })

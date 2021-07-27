@@ -56,7 +56,7 @@ export class AuthService {
     data.username = user.username||""  //como username no esta definido decimos que sino lo detecta lo guarde vacio
 
     localStorage.setItem('user', JSON.stringify(data));
-    this.router.navigate(['/profile'])
+    this.router.navigate(['/'])
   }
 
 

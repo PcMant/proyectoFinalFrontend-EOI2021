@@ -17,7 +17,7 @@ export class CabeceraComponent implements OnInit {
     //esto hace que si estoy logeado no me pide volver a logearme cuando
     //vuelva a lá página, tira de cookies
     if(this.authService.isLoggedIn()) {
-      this.router.navigate(['/'])//cuando estoy logeado navego hacia home
+     // this.router.navigate(['/'])//cuando estoy logeado navego hacia home
     }
 
     this.user = this.authService.userData() //para que nos pille el nombre de usuario en el onIgnit aparezca la el valor que devuelve la funcion UserData,y de este user me devuelva o el username(este normalmente estará vacio) o displayName
@@ -38,6 +38,7 @@ export class CabeceraComponent implements OnInit {
   login() {
     this.authService.googleAuth().then( success => {
       console.log("Login correcto")
+      this.router.navigate(['/'])
     }).catch(error => {
       console.error("Error en el login")
     })
