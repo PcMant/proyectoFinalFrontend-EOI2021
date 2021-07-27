@@ -41,7 +41,7 @@ export class GruposComponent implements OnInit {
           bio:doc.data()["bio"],
           estiloMusical:doc.data()["estiloMusical"],
           esGrupo:doc.data()["esGrupo"],
-          author:doc.data()["author"]
+          author:doc.data()["author"],
         }
         this.allGroups.push(grupo)
       });

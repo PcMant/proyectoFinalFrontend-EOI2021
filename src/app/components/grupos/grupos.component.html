@@ -3,7 +3,7 @@
     <div class="row" *ngFor="let item of allGroups">
         
         <div class=" caja col-md-12 col-xl-3">
-            <div class="disco">
+            <div class="disco" [routerLink]="['/profile/'+item.author]" >
                 <img  class="portada" src="{{item.foto}}" alt="novedad" width="50%">
                 <div class="titulo">{{item.nombre}}</div>
                 

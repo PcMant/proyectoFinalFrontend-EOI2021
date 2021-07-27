@@ -23,6 +23,7 @@ import { AngularFireStorageModule, BUCKET } from '@angular/fire/storage';
 import { AuthService } from './shared/services/auth.service';
 import { NgSelectModule } from '@ng-select/ng-select';
 import { MiniprofileComponent } from './miniprofile/miniprofile.component';
+import { ErrorComponent } from './components/error/error.component';
 
 
 @NgModule({
@@ -36,7 +37,8 @@ import { MiniprofileComponent } from './miniprofile/miniprofile.component';
     TablonComponent,
     CabeceraComponent,
     FooterComponent,
-    MiniprofileComponent
+    MiniprofileComponent,
+    ErrorComponent
   ],
   imports: [
     BrowserModule,

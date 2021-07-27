@@ -3,6 +3,7 @@ import { GruposComponent } from '../components/grupos/grupos.component';
 import { Grupo } from '../shared/models/grupo';
 import { AuthService } from '../shared/services/auth.service';
 import { GruposService } from '../shared/services/grupos.service';
+import { Router, ActivatedRoute, Params } from '@angular/router';
 
 @Component({
   selector: 'miniprofile',
@@ -14,7 +15,14 @@ export class MiniprofileComponent implements OnInit {
   myGroup: Array<Grupo> = []
   userGroup: Array<Grupo> = []
   user:any
-  constructor(private gruposService:GruposService, private authService:AuthService) { }
+  uid: string = "";
+
+  constructor(
+    private gruposService:GruposService, 
+    private authService:AuthService,
+    private _route: ActivatedRoute, 
+    private _router: Router
+  ) { }
 //private gruposComponent:GruposComponent,private authService:AuthService
   ngOnInit(): void {
     //this.todosGrupos = this.gruposComponent.loadGroups()
@@ -22,10 +30,18 @@ export class MiniprofileComponent implements OnInit {
     this.myGroup
     this.loadGroup1()
     this.user = this.authService.userData()
+
+    this._route.params.subscribe((params: Params) =>{
+      this.uid = params.id;
+    });
+
+    if(this.uid){
+      this.user.uid = this.uid;
+    }
   }
 
 
-  loadGroups1(){
+  /*loadGroups1(){
     this.gruposService.readAllGroups().subscribe( data=>{
       
       this.allGroups1=[]
@@ -44,7 +60,7 @@ export class MiniprofileComponent implements OnInit {
 
       })
     })
-  }
+  }*/
 
 
   loadGroup1(){

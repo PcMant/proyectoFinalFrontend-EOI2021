@@ -26,6 +26,10 @@ export class GruposService {
       return this.fireStore.collection('grupos', ref => ref.where('estiloMusical', 'array-contains', estilo)).get();
     }
 
+    /** Filtrado de grupos por author mediante consulta */
+    getGroupForAuthor(uid: string){
+      return this.fireStore.collection('grupos', ref => ref.where('author', '==', uid)).get();
+    }
 //me entra un "grupo" (que sera el algo) de tipo "Grupo", que es una clase definida en el modal grupo
   newGroup(grupo:Grupo){
     return this.fireStore.collection("grupos").add(grupo) //lo que hace es que devuelve la colección grupos de la base de datos a la cual se le ha añadido un grupo (que sería un documento)
