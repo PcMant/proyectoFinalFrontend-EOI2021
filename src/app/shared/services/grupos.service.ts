@@ -18,6 +18,13 @@ export class GruposService {
     //  return this.fireStore.collection("grupos").doc(user).get
     //}
 
+    /** Hace una consulta a firebase y lee unicamente los grupos que tengan un estilo en  concreto mediante consulta 
+     * array-contains es como un operador que busca coincidencias en el array estiloMusical que se encuentra en la colección grupos
+     * utilizando el parámetro estilo para filtrarlo
+    */
+    getGroupForStyle(estilo: string){
+      return this.fireStore.collection('grupos', ref => ref.where('estiloMusical', 'array-contains', estilo)).get();
+    }
 
 //me entra un "grupo" (que sera el algo) de tipo "Grupo", que es una clase definida en el modal grupo
   newGroup(grupo:Grupo){

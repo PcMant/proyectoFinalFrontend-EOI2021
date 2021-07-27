@@ -31,14 +31,16 @@ export class CabeceraComponent implements OnInit {
   }
 
   logout(){
-    this.authService.signOut()
+    this.authService.signOut();
+    this.user = "";
   }
 
   //del servicio de autentificación por private lo metemos y decimos que es por auth y es en google
   login() {
     this.authService.googleAuth().then( success => {
       console.log("Login correcto")
-      this.router.navigate(['/'])
+      this.router.navigate(['/']);
+      this.user = this.authService.userData();
     }).catch(error => {
       console.error("Error en el login")
     })

@@ -14,7 +14,8 @@ const routes: Routes = [
   {path:"estilos",component:EstilosComponent},
   {path:"eventos",component:EventosComponent},
   {path:"grupos",component:GruposComponent},
-   {path:"tablon",component:TablonComponent},
+  {path:"grupos/:estilo",component:GruposComponent}, // Esto es una ruta que recibe un parámetro, llamado estilo
+  {path:"tablon",component:TablonComponent},
   {path:"profile",component:ProfileComponent, canActivate:[AuthGuard]},
   
 ];
