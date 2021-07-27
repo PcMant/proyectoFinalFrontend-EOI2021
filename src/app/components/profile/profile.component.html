@@ -42,12 +42,12 @@
           type="file", pero hay que saber como subirla a firebase, con que typ-->
 
               
-
+          <p>Selecciona los estilos musicales:</p>
           <ng-select
+              class="mb-4"
               [items]="estilosMusicales" 
               [multiple]="true"
               bindLabel="name"
-              
               [closeOnSelect]="false"
               bindValue="name"
               [(ngModel)]="estilosGuardados"
@@ -60,23 +60,12 @@
 
          
           
-        <button (click)="createGroup()">Crear Perfil</button>
-         <button (click)="updateGroup()">Editar Perfil</button>
-        <button (click)="deleteGroup()">Borrar Perfil</button>
+        <button class="mr-4 btn btn-primary" (click)="createGroup()">Crear Perfil</button>
+         <button class="btn btn-warning mr-4"(click)="updateGroup()">Editar Perfil</button>
+        <button class="btn btn-danger mr-4" (click)="deleteGroup()">Borrar Perfil</button>
         </div>
       <hr>
-      <!--
-      <div class="row"> 
-        <div class="galeria-fotos col-6">
-        <h2>Galería de imágenes</h2>
-        fsdafadsfadsfadsfafdsaf
-        </div>
-
-        <div class="galeria-videos col-6">
-          <h2>Galería de videos</h2>
-          dfadsfasdfdasfasf</div>
-        </div>
-        -->
+  
         <miniprofile></miniprofile>
     </div>
   </div>

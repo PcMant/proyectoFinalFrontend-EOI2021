@@ -7,13 +7,16 @@ import{Grupo} from "../models/grupo";
 })
 export class GruposService {
 
-  constructor(private fireStore:AngularFirestore) { }
+  constructor(private fireStore:AngularFirestore, ) { }
 
 
   readAllGroups(){
     return this.fireStore.collection("grupos").get()
   }
-
+    //esta sería una función para leer pero de momento no la usaremos
+   // getGroup(user){
+    //  return this.fireStore.collection("grupos").doc(user).get
+    //}
 
 
 //me entra un "grupo" (que sera el algo) de tipo "Grupo", que es una clase definida en el modal grupo
