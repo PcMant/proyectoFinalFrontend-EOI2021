@@ -1,6 +1,6 @@
 <div class="container col-12">
     <!-- Botton modal-->
-    <button  class="add btn btn-primary  mt-3" data-bs-toggle="modal" data-bs-target="#exampleModal" data-bs-whatever="@mdo"><img src="https://image.flaticon.com/icons/png/512/2052/2052655.png"></button>
+    <p><button  class="add btn btn-primary  mt-3" data-bs-toggle="modal" data-bs-target="#exampleModal" data-bs-whatever="@mdo">Añadir nota</button></p>
     
     <!--Modal-->
         <div   class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
@@ -35,16 +35,16 @@
 
   <!-- Tablon-->
   <div class="row" >
-    <div class="nota" *ngFor="let postit of allPostit">
-      <ul >
+     <div class="nota" *ngFor="let postit of allPostit"> <div style="border: solid 2px black; margin-bottom: 5px; background-color: rgb(241, 237, 237); padding: 10px">  
+      <ul style="list-style: none">
         <li>
-          <a href="#">
-            <h2>{{postit.titulo}}</h2>
-            <p>{{postit.contenido}}</p>
+          <a style="text-decoration: none" href="#">
+            <h2 style="text-decoration: none; color: black">{{postit.titulo}}</h2>
+            <p style="text-decoration: none; color: black">{{postit.contenido}}</p>
           </a>
         </li>
       </ul>
-    </div>
+    </div> </div>
   </div>
     
       <!--
